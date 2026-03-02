@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Primary Meta Tags -->
+		<title>Trip Weather App</title>
+		<meta
+			name="description"
+			content="A clean, intuitive weather app designed to keep your entire trip forecast in one place."
+		/>
+
+		<!-- Theme Color -->
+		<meta name="theme-color" content="#4f46e5" />
+		<meta name="msapplication-TileColor" content="#4f46e5" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="%sveltekit.url%" />
+		<meta property="og:title" content="Trip Weather App" />
+		<meta
+			property="og:description"
+			content="A clean, intuitive weather app designed to keep your entire trip forecast in one place."
+		/>
+		<meta property="og:site_name" content="Trip Weather App" />
+		<meta property="og:locale" content="en_US" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:url" content="%sveltekit.url%" />
+		<meta name="twitter:title" content="Trip Weather App" />
+		<meta
+			name="twitter:description"
+			content="A clean, intuitive weather app designed to keep your entire trip forecast in one place."
+		/>
+
+		<!-- PWA Manifest -->
+		<link rel="manifest" href="%sveltekit.assets%/manifest.json" />
+
+		<!-- Canonical URL (will be overridden by pages) -->
+		<link rel="canonical" href="%sveltekit.url%" />
+
+		<!-- Sitemap -->
+		<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"name": "Trip Weather App",
+				"url": "%sveltekit.url%",
+				"description": "A clean, intuitive weather app designed to keep your entire trip forecast in one place.",
+				"inLanguage": "en-US",
+				"applicationCategory": "weather"
+			}
+		</script>
+
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>

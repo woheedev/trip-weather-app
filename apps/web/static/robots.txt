@@ -1,0 +1,7 @@
+# Sitemap location
+Sitemap: https://tms.wohee.dev/sitemap.xml
+
+# Block specific paths
+User-agent: *
+Disallow: /api/
+Disallow: /_app/

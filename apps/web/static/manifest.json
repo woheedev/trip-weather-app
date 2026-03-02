@@ -1,0 +1,12 @@
+{
+	"name": "Trip Weather App",
+	"short_name": "Trip Weather",
+	"description": "Plan better trips with accurate weather insights",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#0f172a",
+	"theme_color": "#22c55e",
+	"orientation": "portrait-primary",
+	"scope": "/",
+	"categories": ["education", "productivity"]
+}
