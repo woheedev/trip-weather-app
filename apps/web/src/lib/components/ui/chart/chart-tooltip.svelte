@@ -68,7 +68,7 @@
 		return labelFormatter(value, tooltipCtx.payload);
 	});
 
-	const nestLabel = $derived(tooltipCtx.payload.length === 1 && indicator !== 'dot');
+	const nestLabel = $derived(tooltipCtx.payload.length === 1 && indicator !== 'dot' && !formatter);
 </script>
 
 {#snippet TooltipLabel()}

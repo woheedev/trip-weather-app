@@ -127,13 +127,27 @@
 		{/snippet}
 		{#snippet tooltip()}
 			<Chart.Tooltip
-				labelFormatter={(v: Date) =>
-					v.toLocaleString('en-US', {
+				labelFormatter={(_, payload) => {
+					const rawDate = payload?.[0]?.payload?.date;
+					const date = rawDate instanceof Date ? rawDate : rawDate ? new Date(rawDate) : null;
+					if (!date) return '';
+
+					if (xAxisMode === 'time') {
+						return date.toLocaleTimeString('en-US', {
+							hour: 'numeric',
+							minute: '2-digit',
+							hour12: timeFormat === '12h'
+						});
+					}
+
+					return date.toLocaleString('en-US', {
 						month: 'short',
 						day: 'numeric',
 						hour: 'numeric',
+						minute: '2-digit',
 						hour12: timeFormat === '12h'
-					})}
+					});
+				}}
 				indicator="line"
 			>
 				{#snippet formatter({ value, name, item })}
